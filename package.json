@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "one": "node dist/one.js"
+    "one1": "node dist/day1-part1.js",
+    "one2": "node dist/day1-part2.js"
   },
   "keywords": [],
   "author": "",
