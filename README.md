@@ -1,1 +1,1 @@
-my work on [Advent of Code 2024](https://adventofcode.com/2024)
+my work on [Advent of Code 2025](https://adventofcode.com/2025)
