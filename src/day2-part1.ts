@@ -16,16 +16,17 @@ function findInvalid(start:string, end:string) {
   }
 
   let double = parseInt(`${matchNum}${matchNum}`, 10);
-  while ((double >= startNum) && (double <= endNum)) {
-    console.log(double);
-    invalidSum += double;
+  while (double <= endNum) {
+    if(double >= startNum) {
+      invalidSum += double;
+    }
     matchNum++;
     double = parseInt(`${matchNum}${matchNum}`, 10);
   }
 }
 
 try {
-  fh = await open(join(cwd(),"input/day2.practice.txt"), "r");
+  fh = await open(join(cwd(),"input/day2.txt"), "r");
   const data = await fh.readFile({encoding: "utf-8"});
   const lines = data.split("\n");
   for (const line of lines) {
