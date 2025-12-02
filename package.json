@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "one1": "node dist/day1-part1.js",
-    "one2": "node dist/day1-part2.js"
+    "one2": "node dist/day1-part2.js",
+    "two1": "node dist/day2-part1.js"
   },
   "keywords": [],
   "author": "",
