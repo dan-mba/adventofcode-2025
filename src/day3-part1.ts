@@ -27,7 +27,7 @@ function findJolts(batteries:string):number {
 }
 
 try {
-  fh = await open(join(cwd(),"input/day3.practice.txt"), "r");
+  fh = await open(join(cwd(),"input/day3.txt"), "r");
   const data = await fh.readFile({encoding: "utf-8"});
   const lines = data.split("\n");
   for (const line of lines) {
