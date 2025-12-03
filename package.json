@@ -9,7 +9,8 @@
     "one1": "node dist/day1-part1.js",
     "one2": "node dist/day1-part2.js",
     "two1": "node dist/day2-part1.js",
-    "two2": "node dist/day2-part2.js"
+    "two2": "node dist/day2-part2.js",
+    "three1": "node dist/day3-part1.js"
   },
   "keywords": [],
   "author": "",
