@@ -13,7 +13,7 @@ function isFresh(freshRanges:number[][], ingredient:number):boolean {
 }
 
 try {
-  fh = await open(join(cwd(),"input/day5.practice.txt"), "r");
+  fh = await open(join(cwd(),"input/day5.txt"), "r");
   const data = await fh.readFile({encoding: "utf-8"});
   const sections = data.split("\n\n");
   const ranges = sections[0]?.split("\n") ?? [];
