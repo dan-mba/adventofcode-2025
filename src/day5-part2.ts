@@ -16,30 +16,33 @@ try {
   let range;
   while((range = rangeMerge.shift())) {
     if (!range[0] || !range[1]) continue;
-    mergedRanges.push(range);
     for(let i = 0; i < rangeMerge.length; i++) {
+      if (!range[0] || !range[1]) break;
       const checkRange = rangeMerge[i] ?? []
       if (checkRange[0] && checkRange[1]) {
         if((range[0] <= checkRange[0]) && (range[1] >= checkRange[1])) {
           rangeMerge = rangeMerge.toSpliced(i,1);
-          break;
+          continue;
         }
 
         if((range[0] >= checkRange[0]) && (range[1] <= checkRange[1])) {
-          mergedRanges.pop();
-          break;
+          range = checkRange;
+          i=-1;
+          continue;
         }
 
         if(((range[0] >= checkRange[0]) && (range[0] <= checkRange[1]))  ||
           ((range[1] >= checkRange[0]) && (range[1] <= checkRange[1])))
         {
-          mergedRanges.pop();
+          rangeMerge = rangeMerge.toSpliced(i,1);
           const tempRange = [...range, ...checkRange].sort((a,b) => a-b);
-          rangeMerge = rangeMerge.toSpliced(i,1, [tempRange[0] ?? 0, tempRange[3] ?? 0])
-          break;
+          range = [tempRange[0] ?? 0, tempRange[3] ?? 0];
+          i=-1;
+          continue;
         }
       }
     }
+    mergedRanges.push(range);
   }
 
   let fresh = 0
@@ -49,8 +52,6 @@ try {
     }
   }
 
-  //console.log(mergedRanges)
-  
   console.log(fresh);
 
 } finally {
