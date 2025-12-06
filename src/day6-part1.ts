@@ -5,7 +5,7 @@ import { cwd } from "node:process";
 let fh;
 
 try {
-  fh = await open(join(cwd(),"input/day6.practice.txt"), "r");
+  fh = await open(join(cwd(),"input/day6.txt"), "r");
   const data = await fh.readFile({encoding: "utf-8"});
   const lines = data.split("\n").filter(l => l.length > 0);
   const rows = lines.map(l => l.trim().replace(/  +/g, ' ').split(' '));
