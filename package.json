@@ -13,7 +13,8 @@
     "three1": "node dist/day3-part1.js",
     "three2": "node dist/day3-part2.js",
     "five1": "node dist/day5-part1.js",
-    "five2": "node dist/day5-part2.js"
+    "five2": "node dist/day5-part2.js",
+    "six1": "node dist/day6-part1.js"
   },
   "keywords": [],
   "author": "",
